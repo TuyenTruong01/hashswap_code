@@ -1,24 +1,28 @@
-# Node modules
-/node_modules
-
-# Compilation output
-/dist
-
-# pnpm deploy output
-/bundle
-
-# Hardhat Build Artifacts
-/artifacts
-
-# Hardhat compilation (v2) support directory
-/cache
-
-# Typechain output
-/types
-
-# Hardhat coverage reports
-/coverage
-
-# Secrets
+D# secrets
 .env
 .env.*
+*.key
+*.pem
+
+# deps
+node_modules/
+
+# logs
+*.log
+
+# local db/state (nếu bạn coi là nhạy cảm)
+faucet_db.json
+
+# deploy runtime files (should not be committed)
+deploy/
+deploy/*.json
+!deploy/README.md
+
+# if you still want to keep some public deployment outputs, ignore only secrets:
+deploy/secrets.json
+deploy/pending.json
+deploy/positions.json
+deploy/state.json
+
+# other local artifacts
+deployments_*.json
